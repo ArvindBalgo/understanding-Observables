@@ -11,8 +11,8 @@ export class ItemsService {
 
   constructor() {
     this._items$ = new BehaviorSubject([]);
-    this.initialState();
-    this.notify();
+    //this.initialState();
+    //this.notify();
   }
 
   addItem(): void {
@@ -26,7 +26,6 @@ export class ItemsService {
 
   private notify() {
     this._items$.next(this.items);
-    //setTimeout(this._items$.complete(), 10000);
   }
 
   private craftItem(): Item {
